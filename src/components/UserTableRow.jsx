@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const UserTableRow = ({ user, handleInputChange, handleKeyDown }) => {
+const UserTableRow = memo(({ user, handleInputChange, handleKeyDown }) => {
   return (
     <tr>
       <td>
@@ -22,6 +22,6 @@ const UserTableRow = ({ user, handleInputChange, handleKeyDown }) => {
       <td>{user.company.name}</td>
     </tr>
   );
-};
+});
 
 export default UserTableRow;
