@@ -1,9 +1,15 @@
 import './App.css';
+import UserTable from '../src/components/UserTable';
 
 function App() {
   return (
     <div className="App">
-     Table component
+     <header>
+        <h1>User Management Dashboard</h1>
+      </header>
+      <main>
+        <UserTable />
+      </main>
     </div>
   );
 }
