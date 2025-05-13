@@ -1,6 +1,7 @@
 import React from "react";
 
 const headers = [
+  { key: "serial", label: "Serial" },
   { key: "name", label: "Name" },
   { key: "email", label: "Email" },
   { key: "company", label: "Company" },
@@ -23,7 +24,10 @@ const UserTableHeader = ({ sortData, setSortData }) => {
       {headers.map(({ key, label }) => (
         <th key={key} onClick={() => handleSort(key)}>
           {label}
-          {getSortIcon(key, sortData.key, sortData.direction)}
+          {
+            label !== 'Serial' &&
+            getSortIcon(key, sortData.key, sortData.direction)
+          }
         </th>
       ))}
     </tr>

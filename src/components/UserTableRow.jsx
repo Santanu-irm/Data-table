@@ -22,6 +22,7 @@ const UserTableRow = memo(({ user, handleInputChange, handleKeyDown }) => {
       }}
       style={{ position: "relative" }}
     >
+      <td>{user.id}</td>
       <td style={{ position: "relative" }}>
         <input
           ref={nameInputRef}
