@@ -46,7 +46,6 @@ const UserTable = () => {
 
   useEffect(() => setCurrentPage(1), [companyFilter]);
   
-
   return (
     <div className="App">
       <CompanyFilter
