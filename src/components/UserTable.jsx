@@ -45,6 +45,7 @@ const UserTable = () => {
   const currentUsers = filteredUsers.slice(indexOfFirstUser, indexOfLastUser);
 
   useEffect(() => setCurrentPage(1), [companyFilter]);
+  
 
   return (
     <div className="App">
