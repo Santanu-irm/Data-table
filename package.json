@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mantine/core": "^8.2.2",
+    "@mantine/hooks": "^8.2.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -16,12 +18,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "predeploy-storybook": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "homepage": "https://santanudutta.github.io/data-table-app"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -35,5 +43,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^9.1.0",
+    "@storybook/addon-onboarding": "^9.1.0",
+    "@storybook/preset-create-react-app": "^9.1.0",
+    "@storybook/react-webpack5": "^9.1.0",
+    "eslint-plugin-storybook": "^9.1.0",
+    "gh-pages": "^6.3.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^9.1.0",
+    "webpack": "^5.101.0"
   }
 }
